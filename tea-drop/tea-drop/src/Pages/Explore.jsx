@@ -9,7 +9,7 @@ import {
   FiMenu,
   FiX,
 } from "react-icons/fi";
-import Honeydew from "../Assets/Honeydew Green.png";
+import Honeydew from "../Assets/honeydewGreen.png";
 import hgreen from "../Assets/hgreen.png";
 import birthday from "../Assets/birthday.png";
 import spring from "../Assets/spring.png";
