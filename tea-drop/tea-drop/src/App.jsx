@@ -3,6 +3,7 @@ import Hero from "./Components/Hero";
 import Ethical from "./Pages/Ethical";
 import TopBar from "./Components/TopBar";
 import Header from "./Components/Header";
+import Explore from "./Pages/Explore";
 
 function App() {
   return (
@@ -26,6 +27,19 @@ function App() {
             <main>
               <Ethical />
             </main>
+          }
+        />
+
+        <Route
+          path="/explore"
+          element={
+            <>
+              <TopBar />
+              <Header />
+              <main>
+                <Explore />
+              </main>
+            </>
           }
         />
       </Routes>
