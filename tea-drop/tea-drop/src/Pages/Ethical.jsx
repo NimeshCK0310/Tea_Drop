@@ -10,7 +10,9 @@ export default function Ethical() {
           src={ethicalImg}
           alt="Woman holding tea cup"
           className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
-          onError={(e) => { e.target.style.display = 'none'; }}
+          onError={(e) => {
+            e.target.style.display = "none";
+          }}
         />
 
         {/* Overlay content */}
@@ -24,7 +26,9 @@ export default function Ethical() {
               />
             </div>
             <p className="text-xl md:text-2xl font-medium text-gray-200 drop-shadow-md">
-              Taking pride and celebrating<br />purpose with the hands that pluck the tea.
+              Taking pride and celebrating
+              <br />
+              purpose with the hands that pluck the tea.
             </p>
             <Link
               to="/hero"

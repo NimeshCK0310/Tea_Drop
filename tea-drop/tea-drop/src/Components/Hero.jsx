@@ -9,7 +9,9 @@ export default function Hero() {
           src={hero}
           alt="Tea set"
           className="h-[420px] w-full object-cover md:h-[520px] transition-opacity duration-500 hover:opacity-90"
-          onError={(e) => { e.target.style.display = 'none'; }}
+          onError={(e) => {
+            e.target.style.display = "none";
+          }}
         />
 
         {/* Soft overlay */}
@@ -28,9 +30,7 @@ export default function Hero() {
               <p className="text-base md:text-lg text-gray-100 drop-shadow-md">
                 Bring comfort and flavour with our Black Tea collection
               </p>
-              <button
-                className="mt-6 inline-block bg-gray-800 text-white px-6 py-2 rounded-md hover:bg-teal-600 hover:shadow-md transition-all duration-300 transform hover:scale-105"
-              >
+              <button className="mt-6 inline-block bg-gray-800 text-white px-6 py-2 rounded-md hover:bg-teal-600 hover:shadow-md transition-all duration-300 transform hover:scale-105">
                 SHOP NOW
               </button>
             </div>

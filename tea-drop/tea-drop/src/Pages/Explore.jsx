@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiSearch, FiUser, FiHeart, FiShoppingBag, FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import {
+  FiSearch,
+  FiUser,
+  FiHeart,
+  FiShoppingBag,
+  FiChevronDown,
+  FiMenu,
+  FiX,
+} from "react-icons/fi";
 import Honeydew from "../Assets/Honeydew Green.png";
 import hgreen from "../Assets/hgreen.png";
 import birthday from "../Assets/birthday.png";
@@ -18,10 +26,38 @@ export default function Explore() {
   ];
 
   const products = [
-       { id: 1, name: "Honeydew Green", price: 17.50, category: "green tea", sale: true, image: Honeydew },
-       { id: 2, name: "Honeydew Green", price: 17.50, category: "green tea", sale: true, image: hgreen },
-{ id: 3, name: "Birthday Cake", price: 17.50, oldPrice: 20.00, category: "herbal tea", bestSeller: true, image: spring },
-    { id: 4, name: "Spring Green", price: 17.50, category: "green tea", image: birthday },
+    {
+      id: 1,
+      name: "Honeydew Green",
+      price: 17.5,
+      category: "green tea",
+      sale: true,
+      image: Honeydew,
+    },
+    {
+      id: 2,
+      name: "Honeydew Green",
+      price: 17.5,
+      category: "green tea",
+      sale: true,
+      image: hgreen,
+    },
+    {
+      id: 3,
+      name: "Birthday Cake",
+      price: 17.5,
+      oldPrice: 20.0,
+      category: "herbal tea",
+      bestSeller: true,
+      image: spring,
+    },
+    {
+      id: 4,
+      name: "Spring Green",
+      price: 17.5,
+      category: "green tea",
+      image: birthday,
+    },
   ];
 
   return (
@@ -30,7 +66,9 @@ export default function Explore() {
         {/* Title and Categories */}
         <div className="flex flex-col md:flex-row md:items-start mb-8">
           <div className="w-full md:w-auto">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Our Best Selling Loose Leaf</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+              Our Best Selling Loose Leaf
+            </h2>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -42,7 +80,8 @@ export default function Explore() {
                       : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                   }`}
                 >
-                  {category.charAt(0).toUpperCase() + category.slice(1).replace("_", " ")}
+                  {category.charAt(0).toUpperCase() +
+                    category.slice(1).replace("_", " ")}
                 </button>
               ))}
             </div>
@@ -52,9 +91,16 @@ export default function Explore() {
         {/* Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products
-            .filter((product) => activeCategory === "Best Sellers" || product.category === activeCategory.toLowerCase())
+            .filter(
+              (product) =>
+                activeCategory === "Best Sellers" ||
+                product.category === activeCategory.toLowerCase()
+            )
             .map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div
+                key={product.id}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
                 <div className="relative">
                   <img
                     src={product.image}
@@ -73,15 +119,23 @@ export default function Explore() {
                   )}
                 </div>
                 <div className="p-4">
-                  <h3 className="text-lg font-medium text-gray-800">{product.name}</h3>
+                  <h3 className="text-lg font-medium text-gray-800">
+                    {product.name}
+                  </h3>
                   <div className="mt-2">
                     {product.oldPrice ? (
                       <div className="flex items-center gap-2">
-                        <span className="text-gray-500 line-through">${product.oldPrice.toFixed(2)}</span>
-                        <span className="text-teal-600 font-bold">${product.price.toFixed(2)}</span>
+                        <span className="text-gray-500 line-through">
+                          ${product.oldPrice.toFixed(2)}
+                        </span>
+                        <span className="text-teal-600 font-bold">
+                          ${product.price.toFixed(2)}
+                        </span>
                       </div>
                     ) : (
-                      <span className="text-teal-600 font-bold">${product.price.toFixed(2)}</span>
+                      <span className="text-teal-600 font-bold">
+                        ${product.price.toFixed(2)}
+                      </span>
                     )}
                   </div>
                 </div>
