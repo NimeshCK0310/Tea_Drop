@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiSearch, FiUser, FiHeart, FiShoppingBag, FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import Honeydew from "../Assets/Honeydew Green.png";
+import hgreen from "../Assets/hgreen.png";
+import birthday from "../Assets/birthday.png";
+import spring from "../Assets/spring.png";
 
 export default function Explore() {
   const [activeCategory, setActiveCategory] = useState("Best Sellers");
@@ -13,10 +18,10 @@ export default function Explore() {
   ];
 
   const products = [
-    { id: 1, name: "Honeydew Green", price: 17.50, category: "green tea", sale: true, image: "https://via.placeholder.com/300x400?text=Honeydew+Green" },
-    { id: 2, name: "Honeydew Green", price: 17.50, category: "green tea", image: "https://via.placeholder.com/300x400?text=Honeydew+Green" },
-    { id: 3, name: "Birthday Cake", price: 17.50, oldPrice: 20.00, category: "herbal tea", bestSeller: true, image: "https://via.placeholder.com/300x400?text=Birthday+Cake" },
-    { id: 4, name: "Spring Green", price: 17.50, category: "green tea", image: "https://via.placeholder.com/300x400?text=Spring+Green" },
+       { id: 1, name: "Honeydew Green", price: 17.50, category: "green tea", sale: true, image: Honeydew },
+       { id: 2, name: "Honeydew Green", price: 17.50, category: "green tea", sale: true, image: hgreen },
+{ id: 3, name: "Birthday Cake", price: 17.50, oldPrice: 20.00, category: "herbal tea", bestSeller: true, image: spring },
+    { id: 4, name: "Spring Green", price: 17.50, category: "green tea", image: birthday },
   ];
 
   return (
