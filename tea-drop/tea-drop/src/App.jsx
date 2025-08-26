@@ -9,9 +9,15 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/hero"
-          element={
+        
+         <Route path="/" element={
+            <main>
+              <Ethical />
+            </main>
+          }
+        />
+
+        <Route path="/hero" element={
             <>
               <TopBar />
               <Header />
@@ -21,18 +27,8 @@ function App() {
             </>
           }
         />
-        <Route
-          path="/"
-          element={
-            <main>
-              <Ethical />
-            </main>
-          }
-        />
-
-        <Route
-          path="/explore"
-          element={
+       
+        <Route path="/explore" element={
             <>
               <TopBar />
               <Header />
