@@ -10,33 +10,32 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white border-b border-gray-200 shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between transition-all duration-300 ease-in-out">
-        
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-3xl font-extralight tracking-widest text-gray-900 hover:text-teal-600 transition-colors duration-300">
+        <Link to="/" className="text-2xl font-light tracking-widest text-gray-700 hover:text-gray-900 transition-colors duration-200">
           TEA DROP
         </Link>
 
         {/* Nav Links */}
-        <nav className="hidden md:flex space-x-8 text-sm font-medium">
+        <nav className="hidden md:flex space-x-6 text-sm font-medium">
           {/* Teas */}
           <div className="relative group">
             <button
               onClick={() => toggleMenu("teas")}
-              className="flex items-center gap-1 text-gray-700 hover:text-teal-600 transition-colors duration-300"
+              className="flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors duration-200"
             >
-              Teas <FiChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
+              Teas <FiChevronDown size={14} />
             </button>
             {openMenu === "teas" && (
-              <div className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-100 rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Link to="/black-tea" className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-t-lg transition-colors duration-200">
+              <div className="absolute left-0 mt-2 bg-white shadow-md border border-gray-200 rounded-md w-40">
+                <Link to="/black-tea" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">
                   Black Tea
                 </Link>
-                <Link to="/green-tea" className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-200">
+                <Link to="/green-tea" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">
                   Green Tea
                 </Link>
-                <Link to="/herbal" className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-b-lg transition-colors duration-200">
+                <Link to="/herbal" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">
                   Herbal Tea
                 </Link>
               </div>
@@ -47,44 +46,43 @@ export default function Header() {
           <div className="relative group">
             <button
               onClick={() => toggleMenu("accessories")}
-              className="flex items-center gap-1 text-gray-700 hover:text-teal-600 transition-colors duration-300"
+              className="flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors duration-200"
             >
-              Tea Accessories <FiChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
+              Tea Accessories <FiChevronDown size={14} />
             </button>
             {openMenu === "accessories" && (
-              <div className="absolute left-0 mt-2 bg-white shadow-xl border border-gray-100 rounded-lg w-56 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Link to="/teapots" className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-t-lg transition-colors duration-200">
+              <div className="absolute left-0 mt-2 bg-white shadow-md border border-gray-200 rounded-md w-48">
+                <Link to="/teapots" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">
                   Teapots
                 </Link>
-                <Link to="/cups" className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-200">
+                <Link to="/cups" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">
                   Cups & Mugs
                 </Link>
-                <Link to="/infusers" className="block px-4 py-2 text-gray-700 hover:bg-teal-50 hover:text-teal-600 rounded-b-lg transition-colors duration-200">
+                <Link to="/infusers" className="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900">
                   Infusers
                 </Link>
               </div>
             )}
           </div>
 
-          {/* Simple links with hover effects */}
-          <Link to="/gifts" className="text-gray-700 hover:text-teal-600 hover:underline underline-offset-4 transition-all duration-300">
-            Gifts to Celebrate
+          {/* Simple links */}
+          <Link to="/gifts" className="text-gray-600 hover:text-gray-900 hover:underline transition-colors duration-200">
+            Gifts
           </Link>
-          <Link to="/explore" className="text-gray-700 hover:text-teal-600 hover:underline underline-offset-4 transition-all duration-300">
+          <Link to="/explore" className="text-gray-600 hover:text-gray-900 hover:underline transition-colors duration-200">
             Explore
           </Link>
-          <Link to="/wholesale" className="text-gray-700 hover:text-teal-600 hover:underline underline-offset-4 transition-all duration-300">
+          <Link to="/wholesale" className="text-gray-600 hover:text-gray-900 hover:underline transition-colors duration-200">
             Wholesale
           </Link>
         </nav>
 
-        {/* Icons with hover effects */}
-        <div className="flex items-center space-x-6">
-          <FiSearch className="text-gray-600 hover:text-teal-600 cursor-pointer transition-colors duration-300" size={20} />
-          <FiUser className="text-gray-600 hover:text-teal-600 cursor-pointer transition-colors duration-300" size={20} />
-          <FiHeart className="text-gray-600 hover:text-teal-600 cursor-pointer transition-colors duration-300" size={20} />
-          <FiShoppingBag className="text-gray-600 hover:text-teal-600 cursor-pointer transition-colors duration-300" size={20} />
-          <span className="text-sm text-gray-500">0</span>
+        {/* Icons */}
+        <div className="flex items-center space-x-4">
+          <FiSearch className="text-gray-500 hover:text-gray-700 cursor-pointer transition-colors duration-200" size={18} />
+          <FiUser className="text-gray-500 hover:text-gray-700 cursor-pointer transition-colors duration-200" size={18} />
+          <FiHeart className="text-gray-500 hover:text-gray-700 cursor-pointer transition-colors duration-200" size={18} />
+          <FiShoppingBag className="text-gray-500 hover:text-gray-700 cursor-pointer transition-colors duration-200" size={18} />
         </div>
       </div>
     </header>
