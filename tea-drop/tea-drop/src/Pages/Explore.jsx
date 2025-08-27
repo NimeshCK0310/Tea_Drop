@@ -13,7 +13,9 @@ import {
 import hgreen from "../Assets/hgreen.png";
 import birthday from "../Assets/birthday.png";
 import spring from "../Assets/spring.png";
-import Honeydew from "../Assets/honeydewGreen.png";
+import honey from "../Assets/honey.png";
+
+
 
 export default function Explore() {
   const [activeCategory, setActiveCategory] = useState("Best Sellers");
@@ -33,7 +35,7 @@ export default function Explore() {
       price: 17.5,
       category: "green tea",
       sale: true,
-      image: Honeydew,
+      image: honey,
     },
     {
       id: 2,
