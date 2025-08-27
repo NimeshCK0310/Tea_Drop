@@ -1,4 +1,4 @@
-import hero from "../assets/hero.jpg"; // Confirm this path is correct
+import hero from "../Assets/hero.jpg"; // Confirm this path is correct
 
 export default function Hero() {
   return (
