@@ -13,9 +13,7 @@ import {
 import hgreen from "../Assets/hgreen.png";
 import birthday from "../Assets/birthday.png";
 import spring from "../Assets/spring.png";
-import honey from "../Assets/honey.png";
-
-
+import Honeydew from "../Assets/honeydewGreen.png";
 
 export default function Explore() {
   const [activeCategory, setActiveCategory] = useState("Best Sellers");
@@ -35,7 +33,7 @@ export default function Explore() {
       price: 17.5,
       category: "green tea",
       sale: true,
-      image: honey,
+      image: Honeydew,
     },
     {
       id: 2,
@@ -109,6 +107,9 @@ export default function Explore() {
                     src={product.image}
                     alt={product.name}
                     className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.target.style.display = "none"; // Hide on error
+                    }}
                   />
                   {product.sale && (
                     <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
