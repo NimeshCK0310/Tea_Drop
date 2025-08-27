@@ -13,7 +13,7 @@ import {
 import hgreen from "../Assets/hgreen.png";
 import birthday from "../Assets/birthday.png";
 import spring from "../Assets/spring.png";
-import honey from "../assets/honey.png";
+import honey from "../Assets/honey.png";
 
 
 
