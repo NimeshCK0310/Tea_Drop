@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FiArrowUp, FiArrowDown } from "react-icons/fi";
-import ethicalImg from "../assets/ethical.jpg"; // Using the provided image path
+import ethicalImg from "../Assets/ethical.jpg"; // Using the provided image path
 
 export default function Ethical() {
   return (
